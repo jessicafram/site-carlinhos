@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carlinhos Lagoas | Consultoria Fitness</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Oswald:wght@500;700&family=Mr+Dafoe&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="container nav-content">
+            <div class="logo">
+                <a href="#home">
+                    <img src="assets/logo-carlinhos.png" alt="Carlinhos Lagoas" class="logo-img">
+                </a>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="#home">Início</a></li>
+                <li><a href="#calculator">Bio-Análise</a></li>
+                <li><a href="#planilhas">Planilhas</a></li>
+                <li><a href="#contato" class="btn-nav">Agendar</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header id="home" class="hero">
+        <div class="overlay"></div>
+        <div class="container hero-text">
+            <h4>CONSULTORIA FITNESS & PERFORMANCE</h4>
+            <h1>CONSTRUA SEU <br><span class="text-neon">CORPO DE ELITE</span></h1>
+            <p>Método comprovado que une ciência e intensidade para resultados reais.</p>
+            <div class="cta-group">
+                <a href="#contato" class="btn-primary">COMEÇAR AGORA</a>
+                <a href="#planilhas" class="btn-secondary">VER PLANILHAS</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="calculator" class="section-dark">
+        <div class="container">
+            <div class="split-layout">
+                <div class="text-block">
+                    <h2 class="section-title">DESCUBRA SEU <span class="text-neon">PROTOCOLO</span></h2>
+                    <p>Nossa IA de treino analisa seu perfil e indica o caminho mais rápido para seu objetivo. Faça o
+                        teste gratuito.</p>
+                    <ul class="check-list">
+                        <li><i class="fas fa-check"></i> Análise de Biotipo</li>
+                        <li><i class="fas fa-check"></i> Sugestão de Dieta</li>
+                        <li><i class="fas fa-check"></i> Seleção de Metodologia</li>
+                    </ul>
+                </div>
+
+                <div class="glass-card form-box">
+                    <h3><i class="fas fa-dumbbell"></i> Análise Rápida</h3>
+                    <form id="trainingForm">
+                        <div class="input-group">
+                            <label>Gênero</label>
+                            <select id="genero">
+                                <option value="masculino">Masculino</option>
+                                <option value="feminino">Feminino</option>
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <label>Seu Objetivo</label>
+                            <select id="objetivo">
+                                <option value="emagrecimento">Queimar Gordura</option>
+                                <option value="hipertrofia">Ganhar Massa Muscular</option>
+                                <option value="condicionamento">Condicionamento / TAF</option>
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <label>Nível Atual</label>
+                            <select id="nivel">
+                                <option value="iniciante">Iniciante (Sedentário)</option>
+                                <option value="intermediario">Intermediário</option>
+                                <option value="avancado">Avançado / Atleta</option>
+                            </select>
+                        </div>
+                        <button type="button" onclick="gerarTreino()" class="btn-full">GERAR MEU TREINO</button>
+                    </form>
+
+                    <div id="resultArea" class="result-hidden">
+                        <h4>Recomendação:</h4>
+                        <p id="textoRecomendacao" class="highlight-text"></p>
+                        <a href="#contato" class="btn-whatsapp">QUERO ESSE PLANO</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="planilhas" class="section-gray">
+        <div class="container">
+            <h2 class="section-title center">NOSSOS <span class="text-outline">PROGRAMAS</span></h2>
+            <div class="grid-cards">
+                <div class="service-card">
+                    <div class="card-img"
+                        style="background-image: url('https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?q=80&w=1470&auto=format&fit=crop');">
+                    </div>
+                    <div class="card-content">
+                        <h3>Hipertrofia 12 Semanas</h3>
+                        <p>O guia definitivo para ganho de volume limpo.</p>
+                        <a href="#contato">Saiba mais &rarr;</a>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="card-img"
+                        style="background-image: url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=1470&auto=format&fit=crop');">
+                    </div>
+                    <div class="card-content">
+                        <h3>Consultoria Online</h3>
+                        <p>Treino na palma da mão com app exclusivo.</p>
+                        <a href="#contato">Saiba mais &rarr;</a>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="card-img"
+                        style="background-image: url('https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=1470&auto=format&fit=crop');">
+                    </div>
+                    <div class="card-content">
+                        <h3>Desafio Seca Barriga</h3>
+                        <p>Alta intensidade para resultados rápidos.</p>
+                        <a href="#contato">Saiba mais &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-dark">
+        <div class="container center">
+            <h2 class="section-title">RESULTADOS <span class="text-neon">REAIS</span></h2>
+            <div class="testimonials-grid">
+                <div class="glass-card left-align">
+                    <p class="italic-text">"Perdi 10kg em 3 meses com a planilha do Calinhos. O suporte pelo WhatsApp
+                        faz toda a diferença!"</p>
+                    <div class="user-info">
+                        <div class="avatar">A</div>
+                        <div>
+                            <h5>Ana Clara</h5>
+                            <small>Aluna há 1 ano</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="glass-card left-align">
+                    <p class="italic-text">"A avaliação física foi um divisor de águas. Descobri onde estava errando e
+                        ajustamos a dieta."</p>
+                    <div class="user-info">
+                        <div class="avatar">P</div>
+                        <div>
+                            <h5>Pedro Marcos</h5>
+                            <small>Consultoria Online</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contato">
+        <div class="container footer-content">
+
+            <div class="logo-footer">
+                <a href="#home">
+                    <img src="assets/logo-carlinhos.png" alt="Carlinhos Lagoas" class="logo-img-custom">
+                </a>
+            </div>
+
+            <div class="booking-area">
+                <p style="color: #888; margin-bottom: 10px; font-size: 0.9rem;">PRONTO PARA EVOLUIR?</p>
+                <a href="https://wa.me/55SEUNUMERO" class="btn-whatsapp-outline">
+                    <i class="fab fa-whatsapp"></i> AGENDAR AGORA
+                </a>
+            </div>
+
+            <div class="socials">
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="mailto:email@exemplo.com" aria-label="E-mail"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+
+        <div class="copy">
+            <p>&copy; 2024 Carlinhos Lagoas. Desenvolvido por Jessica França.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
