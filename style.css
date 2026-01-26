@@ -610,3 +610,158 @@ footer {
         /* Tamanho no rodapé mobile */
     }
 }
+
+/* ==================================================
+   CORREÇÃO FINAL: HEADER "CORTADO" E RODAPÉ PEQUENO
+   Cole no final do style.css
+   ================================================== */
+
+/* 1. AJUSTE DO CABEÇALHO (Navbar)
+   O objetivo aqui é criar uma "janela" que mostra só o topo da imagem (CL)
+   e esconde a parte de baixo (Assinatura).
+*/
+.navbar .logo {
+    height: 60px;
+    /* Define a altura fixa do menu */
+    overflow: hidden;
+    /* O que passar dessa altura será cortado */
+    display: flex;
+    align-items: center;
+}
+
+.navbar .logo a {
+    display: block;
+    height: 100%;
+    /* O link ocupa toda a altura */
+}
+
+.navbar .logo img {
+    height: 100px;
+    /* A imagem é renderizada MAIOR que o container... */
+    width: auto;
+    object-fit: cover;
+    /* ...para podermos cortar */
+    object-position: top center;
+    /* ...mantendo o foco no TOPO (CL) */
+
+    /* Ajuste fino: sobe a imagem para centralizar o CL */
+    transform: translateY(-5px);
+}
+
+
+/* 2. AJUSTE DO RODAPÉ (Footer)
+   Aqui forçamos a imagem a respeitar um tamanho máximo.
+*/
+.logo-footer img {
+    height: 120px !important;
+    /* Altura controlada (ajuste esse número se quiser maior/menor) */
+    width: auto !important;
+    /* Mantém a proporção correta */
+    max-width: 250px;
+    /* Trava de segurança para não explodir na tela */
+
+    /* Centraliza a imagem no rodapé */
+    display: block;
+    margin: 0 auto 20px auto;
+}
+
+/* Garante que no celular o rodapé também fique comportado */
+@media (max-width: 768px) {
+    .logo-footer img {
+        height: 90px !important;
+    }
+}
+
+/* ==========================================================
+   AJUSTE DEFINITIVO: CAIXA ALTA + IMAGEM AMPLIADA
+   Substitua o último bloco do style.css por este.
+   ========================================================== */
+
+/* 1. LIMPEZA (SEGURANÇA) */
+.logo a::after,
+.logo-container a::after,
+.logo-unified-link::after,
+.navbar .logo a::after {
+    display: none !important;
+}
+
+/* ==============================
+   CABEÇALHO / NAVBAR - CORREÇÃO FINAL (CÍRCULO)
+   ============================== */
+
+.navbar .logo {
+    /* 1. O FORMATO DA JANELA */
+    height: 90px;
+    width: 90px;
+
+    /* A MÁGICA: Transforma o quadrado em um CÍRCULO */
+    border-radius: 50%;
+
+    /* Corta o texto "Carlinhos" que ficar fora do círculo */
+    overflow: hidden;
+
+    /* Centralização */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* Prepara para o brilho na borda */
+    transition: all 0.3s ease;
+}
+
+.navbar .logo a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.navbar .logo img {
+    /* 2. O ENCAIXE DA IMAGEM */
+    /* "cover" faz a imagem preencher todo o círculo */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    /* "top center" foca no CL e empurra o texto para fora do círculo */
+    object-position: top center;
+
+    display: block;
+    margin: 0 !important;
+}
+
+/* --- EFEITO ROVER (HOVER) NO CABEÇALHO --- */
+/* Aplicamos o brilho no CÍRCULO (.logo), não na imagem cortada */
+.navbar .logo:hover {
+    /* Sombra externa circular verde neon */
+    box-shadow: 0 0 15px #39ff14, 0 0 5px #39ff14 inset;
+    transform: scale(1.05);
+    border: 1px solid rgba(57, 255, 20, 0.3);
+}
+
+
+/* ==============================
+   RODAPÉ - RESGATE DO BRILHO
+   ============================== */
+
+.logo-footer img {
+    height: 110px;
+    width: auto;
+    margin: 0 auto 15px;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+/* Forçamos o seletor para garantir que o brilho funcione */
+.logo-footer:hover img,
+.logo-footer a:hover img {
+    filter: drop-shadow(0 0 10px #39ff14);
+    transform: scale(1.05);
+}
+
+/* LIMPEZA DE SEGURANÇA */
+.navbar .logo a::after,
+.navbar .logo::after {
+    display: none !important;
+}
