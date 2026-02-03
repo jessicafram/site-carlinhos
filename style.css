@@ -145,13 +145,29 @@ body {
     color: var(--dark) !important;
 }
 
-/* --- Hero --- */
+/* --- Hero (O Fundo) --- */
 .hero {
     height: 100vh;
-    background: url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1470&auto=format&fit=crop') center/cover no-repeat;
+    
+    /* AJUSTE 1: Puxando a foto para a ESQUERDA */
+    /* Mudei de 35% para 25%. Quanto menor o número, mais pra esquerda ele vai. */
+    background: url('assets/bunner_carlinhos.png') 25% center/cover no-repeat;
+    
     display: flex;
     align-items: center;
+    justify-content: flex-start; 
     position: relative;
+}
+
+/* --- Hero Text (O Título) --- */
+.hero .hero-text {
+    /* AJUSTE 2: Empurrando o texto para a DIREITA */
+    /* Mudei de 10% para 15%. Isso aproxima o texto da foto. */
+    margin-left: 15%; 
+    
+    max-width: 600px; /* Reduzi um pouquinho a largura para ficar mais compacto */
+    position: relative;
+    z-index: 2;
 }
 
 .overlay {
