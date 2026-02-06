@@ -781,3 +781,33 @@ footer {
 .navbar .logo::after {
     display: none !important;
 }
+
+/* =========================================
+   CORREÇÃO PARA CELULAR (MOBILE)
+   Cole isso no final do seu style.css
+   ========================================= */
+@media (max-width: 768px) {
+    .hero {
+        /* No celular, ignoramos o 25% e centralizamos a foto */
+        background-position: center top !important; 
+        
+        /* Centralizamos o conteúdo na tela */
+        justify-content: center !important;
+        align-items: center !important;
+    }
+    
+    .hero .hero-text {
+        /* Removemos a margem da esquerda (o empurrão) */
+        margin-left: 0 !important;
+        
+        /* Centralizamos o texto */
+        text-align: center;
+        padding: 0 20px; /* Um respiro nas laterais */
+        width: 100%;
+    }
+
+    /* Ajuste de tamanho da fonte para não estourar no celular */
+    .hero-text h1 {
+        font-size: 2.5rem; /* Letra um pouco menor */
+    }
+}
