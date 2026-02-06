@@ -784,73 +784,33 @@ footer {
 }
 
 /* =========================================
-   HERO / BANNER ESTILO "CAPA" (SUA IDEIA)
+   CELULAR (MOBILE) - AJUSTES FINAIS
    ========================================= */
-
-.hero {
-    height: 100vh;
-
-    /* 1. A FOTO (POSIÇÃO ESTRATÉGICA) */
-    /* Mudei para 20%. Isso traz o corpo dele para a esquerda da tela,
-       ficando "atrás" da área onde o texto vai entrar. */
-    background: url('assets/bunner_carlinhos.png') 20% center/cover no-repeat;
-
-    display: flex;
-    align-items: center;
-    /* Alinha o texto na esquerda */
-    justify-content: flex-start;
-
-    position: relative;
-}
-
-/* 2. O "FILTRO" (OVERLAY) PARA LEITURA */
-.overlay {
-    position: absolute;
-    inset: 0;
-
-    /* O segredo da leitura: Um degradê forte na esquerda */
-    /* Esquerda (0%): Preto 90% (quase sólido) para o texto brilhar. */
-    /* Meio (50%): Preto 60% (sombra no corpo dele). */
-    /* Direita (100%): Quase transparente para o rosto aparecer. */
-    background: linear-gradient(to right,
-            rgba(0, 0, 0, 0.9) 0%,
-            rgba(0, 0, 0, 0.6) 50%,
-            rgba(10, 10, 10, 0.1) 100%);
-
-    z-index: 1;
-    /* Fica em cima da foto */
-}
-
-/* 3. O TEXTO (POR CIMA DE TUDO) */
-.hero-text {
-    position: relative;
-    /* Z-INDEX ALTO para garantir que fique na frente do filtro e da foto */
-    z-index: 10;
-
-    /* Trazemos o texto de volta para a esquerda padrão */
-    margin-left: 0;
-    /* Um pequeno respiro da borda da tela */
-    padding-left: 5%;
-
-    /* Limita a largura */
-    max-width: 650px;
-}
-
-/* --- MANTENDO A CORREÇÃO DO CELULAR --- */
 @media (max-width: 768px) {
     .hero {
+        /* 1. A TROCA MÁGICA DA FOTO */
+        /* Aqui a gente avisa para ignorar a foto de PC e carregar a mobile */
+        background-image: url('assets/bunner_carlinhos_mobile.png') !important;
+
+        /* 2. AJUSTE DE POSIÇÃO */
+        /* Centraliza a nova foto perfeitamente */
         background-position: center top !important;
+        background-size: cover !important;
+
+        /* Centraliza o layout */
         justify-content: center !important;
+        align-items: center !important;
     }
 
     .hero-text {
+        margin-left: 0 !important;
         text-align: center;
         padding: 0 20px;
-        margin-left: 0 !important;
+        width: 100%;
     }
 
-    /* No celular, o filtro precisa ser mais escuro no geral */
-    .overlay {
-        background: rgba(0, 0, 0, 0.7) !important;
+    /* Ajuste para o texto não ficar gigante no celular */
+    .hero-text h1 {
+        font-size: 2.5rem;
     }
 }
