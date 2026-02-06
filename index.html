@@ -26,7 +26,7 @@
                 <li><a href="#home">Início</a></li>
                 <li><a href="#calculator">Bio-Análise</a></li>
                 <li><a href="#planilhas">Planilhas</a></li>
-                <li><a href="#contato" class="btn-nav">Agendar</a></li>
+                <li><a href="#consultoria" class="btn-nav">Consultoria</a></li>
             </ul>
         </div>
     </nav>
@@ -38,7 +38,7 @@
             <h1>CONSTRUA SEU <br><span class="text-neon">CORPO DE ELITE</span></h1>
             <p>Método comprovado que une ciência e intensidade para resultados reais.</p>
             <div class="cta-group">
-                <a href="#contato" class="btn-primary">COMEÇAR AGORA</a>
+                <a href="#consultoria" class="btn-primary">COMEÇAR AGORA</a>
                 <a href="#planilhas" class="btn-secondary">VER PLANILHAS</a>
             </div>
         </div>
@@ -90,7 +90,7 @@
                     <div id="resultArea" class="result-hidden">
                         <h4>Recomendação:</h4>
                         <p id="textoRecomendacao" class="highlight-text"></p>
-                        <a href="#contato" class="btn-whatsapp">QUERO ESSE PLANO</a>
+                        <a href="#consultoria" class="btn-whatsapp">QUERO ESSE PLANO</a>
                     </div>
                 </div>
             </div>
@@ -101,41 +101,88 @@
         <div class="container">
             <h2 class="section-title center">NOSSOS <span class="text-outline">PROGRAMAS</span></h2>
             <div class="grid-cards">
-                <div class="service-card">
-                    <div class="card-img"
-                        style="background-image: url('https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?q=80&w=1470&auto=format&fit=crop');">
+
+                <div class="grid-cards">
+
+                    <div class="service-card">
+                        <div class="card-img"
+                            style="background-image: url('https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?q=80&w=1470&auto=format&fit=crop');">
+                        </div>
+                        <div class="card-content">
+                            <h3>Hipertrofia 12 Semanas</h3>
+                            <p>O guia definitivo para ganho de volume limpo. Estratégia de treino ABCDE focada em carga
+                                progressiva.</p>
+                            <a onclick="abrirModal('Hipertrofia')" class="btn-lock" style="cursor: pointer;">
+                                <i class="fas fa-lock"></i> ACESSAR TREINO
+                            </a>
+                        </div>
                     </div>
-                    <div class="card-content">
-                        <h3>Hipertrofia 12 Semanas</h3>
-                        <p>O guia definitivo para ganho de volume limpo.</p>
-                        <a href="#contato">Saiba mais &rarr;</a>
+
+                    <div class="service-card">
+                        <div class="card-img"
+                            style="background-image: url('https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=1470&auto=format&fit=crop');">
+                        </div>
+                        <div class="card-content">
+                            <h3>Desafio Seca Barriga</h3>
+                            <p>30 dias de intensidade máxima. Combinação de HIIT e Musculação para acelerar o
+                                metabolismo basal.</p>
+                            <a onclick="abrirModal('Seca Barriga')" class="btn-lock" style="cursor: pointer;">
+                                <i class="fas fa-lock"></i> ACESSAR TREINO
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="card-img"
+                            style="background-image: url('https://images.unsplash.com/photo-1574680096145-d05b474e2155?q=80&w=1469&auto=format&fit=crop');">
+                        </div>
+                        <div class="card-content">
+                            <h3>Glúteos de Aço</h3>
+                            <p>Metodologia focada em membros inferiores com ênfase total na construção de pernas
+                                definidas.</p>
+                            <a onclick="abrirModal('Gluteos')" class="btn-lock" style="cursor: pointer;">
+                                <i class="fas fa-lock"></i> ACESSAR TREINO
+                            </a>
+                        </div>
                     </div>
                 </div>
-                <div class="service-card">
-                    <div class="card-img"
-                        style="background-image: url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=1470&auto=format&fit=crop');">
-                    </div>
-                    <div class="card-content">
-                        <h3>Consultoria Online</h3>
-                        <p>Treino na palma da mão com app exclusivo.</p>
-                        <a href="#contato">Saiba mais &rarr;</a>
-                    </div>
+            </div>
+    </section>
+
+    <section class="section-dark" id="consultoria" style="border-top: 1px solid #222;">
+        <div class="container">
+            <div class="split-layout">
+                <div class="consultoria-text">
+                    <h4 class="text-neon">ATENDIMENTO VIP</h4>
+                    <h2 class="section-title">CONSULTORIA <span class="text-outline">ONLINE</span></h2>
+                    <p style="color: #b3b3b3; margin-bottom: 20px; font-size: 1.1rem; line-height: 1.6;">
+                        Planilhas funcionam, mas <strong>estratégia personalizada</strong> transforma.
+                        <br><br>
+                        Na consultoria, eu analiso sua rotina e bio-mecânica para montar um planejamento 100% focado na
+                        sua realidade.
+                    </p>
+
+                    <ul class="check-list">
+                        <li><i class="fas fa-check"></i> Treino ajustado quinzenalmente</li>
+                        <li><i class="fas fa-check"></i> Análise de execução por vídeo</li>
+                        <li><i class="fas fa-check"></i> Suporte direto no WhatsApp</li>
+                    </ul>
+
+                    <br>
+                    <a href="https://wa.me/55SEUNUMERO" class="btn-primary">
+                        <i class="fab fa-whatsapp"></i> FALAR COM O CARLINHOS
+                    </a>
                 </div>
-                <div class="service-card">
-                    <div class="card-img"
-                        style="background-image: url('https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=1470&auto=format&fit=crop');">
-                    </div>
-                    <div class="card-content">
-                        <h3>Desafio Seca Barriga</h3>
-                        <p>Alta intensidade para resultados rápidos.</p>
-                        <a href="#contato">Saiba mais &rarr;</a>
-                    </div>
+
+                <div class="consultoria-img">
+                    <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1470&auto=format&fit=crop"
+                        style="width: 100%; border-radius: 10px; border: 1px solid #333;" alt="Consultoria">
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="section-dark">
+    <section class="section-gray">
         <div class="container center">
             <h2 class="section-title">RESULTADOS <span class="text-neon">REAIS</span></h2>
             <div class="testimonials-grid">
@@ -189,10 +236,66 @@
         </div>
 
         <div class="copy">
-            <p>&copy; 2024 Carlinhos Lagoas. Desenvolvido por Jessica França.</p>
+            <p>&copy; 2026 Carlinhos Lagoas. Desenvolvido por Jessica França.</p>
         </div>
     </footer>
     <script src="script.js"></script>
+
+    <div id="modalLock" class="modal-overlay">
+        <div class="modal-content glass-card">
+            <span class="close-btn" onclick="fecharModal()">&times;</span>
+
+            <div class="modal-header center">
+                <div class="icon-lock">
+                    <i class="fas fa-lock"></i>
+                </div>
+                <h3 style="font-family: var(--font-title); font-size: 2rem;">DESBLOQUEAR <span
+                        class="text-neon">TREINO</span></h3>
+                <p style="color: #ccc; margin-top: 10px;">Este material é exclusivo. Preencha seus dados para liberar o
+                    download imediato.</p>
+            </div>
+
+            <form id="formCaptura" onsubmit="liberarAcesso(event)">
+                <div class="input-group">
+                    <input type="text" id="nomeLead" placeholder="Seu Nome Completo" required>
+                </div>
+                <div class="input-group">
+                    <input type="tel" id="zapLead" placeholder="Seu WhatsApp (com DDD)" required>
+                </div>
+
+                <button type="submit" class="btn-primary" style="width: 100%; margin-top: 15px;">
+                    <i class="fas fa-unlock"></i> LIBERAR ACESSO AGORA
+                </button>
+            </form>
+
+            <p style="text-align: center; font-size: 0.8rem; color: #666; margin-top: 15px;">
+                <i class="fas fa-shield-alt"></i> Seus dados estão seguros. Zero Spam.
+            </p>
+        </div>
+    </div>
+
+    <div id="modalWelcome" class="modal-overlay">
+        <div class="modal-content glass-card" style="text-align: center;">
+
+            <div class="icon-lock" style="color: var(--neon); font-size: 3.5rem; margin-bottom: 20px;">
+                <i class="fas fa-user-check"></i>
+            </div>
+
+            <h3 style="font-family: var(--font-title); font-size: 1.8rem; margin-bottom: 10px;">
+                BEM-VINDO DE VOLTA, <br>
+                <span id="nomeAlunoWelcome" class="text-neon">ALUNO</span>!
+            </h3>
+
+            <p style="color: #ccc; margin-bottom: 30px;">
+                Seu acesso premium já está liberado. <br>Bora treinar?
+            </p>
+
+            <button onclick="irParaTreino()" class="btn-primary" style="width: 100%;">
+                ACESSAR TREINO AGORA <i class="fas fa-arrow-right"></i>
+            </button>
+
+        </div>
+    </div>
 </body>
 
 </html>
