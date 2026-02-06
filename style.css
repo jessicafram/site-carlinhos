@@ -788,16 +788,12 @@ footer {
    ========================================= */
 @media (max-width: 768px) {
     .hero {
-        /* 1. A TROCA MÁGICA DA FOTO */
-        /* Aqui a gente avisa para ignorar a foto de PC e carregar a mobile */
-        background-image: url('assets/bunner_carlinhos_mobile.png') !important;
+        /* Nome simples e direto: */
+        background-image: url('assets/celular.png') !important;
 
-        /* 2. AJUSTE DE POSIÇÃO */
-        /* Centraliza a nova foto perfeitamente */
+        /* O resto continua igual */
         background-position: center top !important;
         background-size: cover !important;
-
-        /* Centraliza o layout */
         justify-content: center !important;
         align-items: center !important;
     }
@@ -812,5 +808,10 @@ footer {
     /* Ajuste para o texto não ficar gigante no celular */
     .hero-text h1 {
         font-size: 2.5rem;
+    }
+
+    /* Ajuste de clareza no celular (Mude o 0.4 se quiser mais claro ou escuro) */
+    .overlay {
+        background: rgba(0, 0, 0, 0.4) !important;
     }
 }
